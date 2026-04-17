@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 10%;
+
+    --primary: 220 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 30% 20%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 160 60% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 220 70% 50%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 220 30% 12%;
+    --sidebar-foreground: 220 10% 85%;
+    --sidebar-primary: 220 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 18%;
+    --sidebar-accent-foreground: 220 10% 90%;
+    --sidebar-border: 220 25% 20%;
+    --sidebar-ring: 220 70% 55%;
+
+    /* CRM-specific tokens */
+    --score-high: 142 71% 45%;
+    --score-medium: 38 92% 50%;
+    --score-low: 0 72% 51%;
+    --score-unscored: 215 14% 60%;
+
+    --status-open: 142 71% 45%;
+    --status-closed: 0 72% 51%;
+    --status-pending: 38 92% 50%;
+    --status-assigned: 220 70% 50%;
+    --status-completed: 142 71% 45%;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 220 10% 92%;
+    --card: 220 25% 12%;
+    --card-foreground: 220 10% 92%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 220 10% 92%;
+    --primary: 220 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 220 10% 85%;
+    --muted: 220 20% 16%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 160 60% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 220 70% 55%;
+    --sidebar-background: 220 30% 6%;
+    --sidebar-foreground: 220 10% 85%;
+    --sidebar-primary: 220 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 12%;
+    --sidebar-accent-foreground: 220 10% 90%;
+    --sidebar-border: 220 25% 14%;
+    --sidebar-ring: 220 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .score-high { color: hsl(var(--score-high)); }
+  .score-medium { color: hsl(var(--score-medium)); }
+  .score-low { color: hsl(var(--score-low)); }
+  .score-unscored { color: hsl(var(--score-unscored)); }
+  .bg-score-high { background-color: hsl(var(--score-high)); }
+  .bg-score-medium { background-color: hsl(var(--score-medium)); }
+  .bg-score-low { background-color: hsl(var(--score-low)); }
+  .bg-score-unscored { background-color: hsl(var(--score-unscored)); }
+}
